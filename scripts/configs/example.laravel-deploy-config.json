@@ -1,0 +1,25 @@
+{
+    "deployment_prefix": "deployment",
+    "repository_url": "git@github.com:vendor/repo.git",
+    "deploy_key": "/root/.ssh/deploy-key",
+    "env_file": ".env",
+    "storage_symlink": "app-storage",
+    "prod_symlink": "prod.app",
+    "log_dir": "logs",
+    "max_logs": 10,
+    "delete_failed_deploy": false,
+    "webhooks": {
+        "on_start": [
+            "https://discord.com/api/webhooks/"
+        ],
+        "on_error": [
+            "https://discord.com/api/webhooks/"
+        ],
+        "on_rollback": [
+            "https://discord.com/api/webhooks/"
+        ],
+        "on_success": [
+            "https://discord.com/api/webhooks/"
+        ]
+    }
+}
