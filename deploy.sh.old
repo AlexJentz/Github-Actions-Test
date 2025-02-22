@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+
+### Editable Parameters
+DIR_BASE_NAME="prod-$(date +'%Y%m%d-%H%M')" # This is the format of the new directory I would like to be pushed
+SYMLINK_FOLDER="prod.abstractel.app"
+
+# Other Parameters
+DIR_NAME="$BASE_NAME" # This is used when generating the actual directory to push the latest code into
+BASE_DIR_COUNT=1 # This is used when determining what the new production folder will be called.
+
+
+echo "Deployment started..."
+
+echo "Create new directory for production push."
+    # Check if directory exists, and increment if needed
+        while [[ -d "$DIR_NAME" ]]; do
+            DIR_NAME="${DIR_BASE_NAME}-$BASE_DIR_COUNT"
+            ((BASE_DIR_COUNT++))
+        done
+
+    # Create the unique directory
+        mkdir "$DIR_NAME"
+    echo "Directory '$DIR_NAME' created successfully."
+
+
+if [[ -L "$SYMLINK" ]]

@@ -1,0 +1,9 @@
+/logs/*
+/deployment*/
+/app-storage
+/deploy-key
+/deploy-key.pub
+.env
+.prod-app-log
+.previous-prod-target
+prod.app

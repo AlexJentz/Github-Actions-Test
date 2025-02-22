@@ -1,0 +1,25 @@
+{
+    "deployment_prefix": "deployment",
+    "repository_url": "git@github.com:AlexJentz/test-push-repo.git",
+    "deploy_key": "/root/.ssh/deploy-key",
+    "env_file": ".env",
+    "storage_symlink": "app-storage",
+    "prod_symlink": "prod.app",
+    "log_dir": "logs",
+    "max_logs": 10,
+    "delete_failed_deploy": false,
+    "webhooks": {
+        "on_start": [
+            "https://discord.com/api/webhooks/1342646434020720640/zA3ptBj_Jx4L5_gq9p4IhJqo1tWPgrKCm4_Lsn-L5PdesL8bK7QOzAE4zC_l4RZg-C0a"
+        ],
+        "on_error": [
+            "https://discord.com/api/webhooks/1342646434020720640/zA3ptBj_Jx4L5_gq9p4IhJqo1tWPgrKCm4_Lsn-L5PdesL8bK7QOzAE4zC_l4RZg-C0a"
+        ],
+        "on_rollback": [
+            "https://discord.com/api/webhooks/1342646434020720640/zA3ptBj_Jx4L5_gq9p4IhJqo1tWPgrKCm4_Lsn-L5PdesL8bK7QOzAE4zC_l4RZg-C0a"
+        ],
+        "on_success": [
+            "https://discord.com/api/webhooks/1342646434020720640/zA3ptBj_Jx4L5_gq9p4IhJqo1tWPgrKCm4_Lsn-L5PdesL8bK7QOzAE4zC_l4RZg-C0a"
+        ]
+    }
+}
